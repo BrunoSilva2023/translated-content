@@ -1,11 +1,6 @@
 ---
 title: Ferramentas
 slug: conflicting/Web/CSS
-tags:
-  - CSS
-  - NeedsContent
-translation_of: Web/CSS/Tools
-original_slug: Web/CSS/Tools
 ---
 
 O CSS oferece diversos recursos poderosos e um grande número de parâmetros que, às vezes, podem ser difíceis de usar. Então, é bem melhor quando você pode visualizá-los enquanto trabalha com eles.

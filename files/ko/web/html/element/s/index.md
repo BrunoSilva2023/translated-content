@@ -1,21 +1,13 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/s
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<s>` 요소**는 글자에 취소선, 즉 글자를 가로지르는 선을 그립니다. `<s>` 요소를 사용해 이제 관계 없거나 더 이상 정확하지 않은 부분을 나타내세요. 그러나, `<s>`는 문서의 편집 기록을 나타내는 용도로는 적합하지 않습니다. 상황에 따라 {{HTMLElement("del")}}과 {{HTMLElement("ins")}} 요소를 대신 사용하세요.
 
 {{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
 
 <table class="properties">
   <tbody>
@@ -73,7 +65,7 @@ translation_of: Web/HTML/Element/s
 ## 예제
 
 ```html
-<s>Today's Special: Salmon</s> SOLD OUT<br>
+<s>Today's Special: Salmon</s> SOLD OUT<br />
 ```
 
 {{EmbedLiveSample("예제")}}
@@ -114,7 +106,7 @@ s::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## 같이 보기
 

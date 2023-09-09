@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
-translation_of: Web/API/AnalyserNode/maxDecibels
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -57,10 +56,10 @@ function dessiner() {
 
   for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
-    
+
     contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
        contexteCanvas.fillRect(x,HEIGHT-hauteurBarre/2,largeurBarre,hauteurBarre/2);
-       
+
     x += largeurBarre + 1;
   }
 };

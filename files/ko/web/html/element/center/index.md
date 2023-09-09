@@ -1,8 +1,8 @@
 ---
 title: <center>
 slug: Web/HTML/Element/center
-translation_of: Web/HTML/Element/center
 ---
+
 {{deprecated_header()}}
 
 ## 개요
@@ -20,22 +20,28 @@ translation_of: Web/HTML/Element/center
 ## 예제 1
 
 ```html
-<center>This text will be centered.
-<p>So will this paragraph.</p></center>
+<center>
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</center>
 ```
 
 ## 예제 2 (CSS 대안)
 
 ```html
-<div style="text-align:center">This text will be centered.
-<p>So will this paragraph.</p></div>
+<div style="text-align:center">
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</div>
 ```
 
 ## 예제 3 (CSS 대안)
 
 ```html
-<p style="text-align:center">This line will be centered.<br>
-And so will this line.</p>
+<p style="text-align:center">
+  This line will be centered.<br />
+  And so will this line.
+</p>
 ```
 
 ## 메모

@@ -1,8 +1,6 @@
 ---
 title: Conceitos gerais da programação assíncrona
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Concepts
-original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}

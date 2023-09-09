@@ -22,7 +22,7 @@ canvas 提供了两种方法来渲染文本：
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
@@ -36,7 +36,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("一个填充文本的示例", 310, 110)}}
 
 ### 一个文本边框的示例
 
@@ -44,7 +44,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
@@ -58,7 +58,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("一个文本边框的示例", 310, 110)}}
 
 ## 有样式的文本
 
@@ -107,7 +107,8 @@ ctx.strokeText("Hello world", 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -123,20 +124,20 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('textBaseline 例子', 700, 360) }}
 
 ## 预测量文本宽度
 
@@ -149,7 +150,7 @@ window.addEventListener("load", drawCanvas);
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }

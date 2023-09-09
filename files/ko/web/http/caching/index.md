@@ -1,12 +1,8 @@
 ---
 title: HTTP 캐싱
 slug: Web/HTTP/Caching
-tags:
-  - HTTP
-  - 가이드
-  - 캐싱
-translation_of: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트와 애플리케이션의 성능은 이전에 가져온 리소스들을 재사용함으로써 현저하게 향상될 수 있습니다. 웹 캐시는 레이턴시와 네트워크 트래픽을 줄여줌으로써 리소스를 보여주는 데에 필요한 시간을 줄여줍니다. HTTP 캐싱을 활용하면 웹 사이트가 좀 더 빠르게 반응하도록 만들 수 있습니다.
@@ -17,7 +13,7 @@ translation_of: Web/HTTP/Caching
 
 캐시에는 몇 가지 종류가 있습니다: 크게 사설(private) 혹은 공유(shared) 캐시 두 가지 부류로 분류될 수 있습니다. *공유 캐시*는 한 명 이상의 사용자가 재사용할 수 있도록 응답을 저장하는 캐시를 말합니다. *사설 캐시*는 한 명의 사용자만 사용하는 캐시를 말합니다. 이 페이지에서는 거의 대부분 브라우저와 프록시 캐시에 대해서만 다룰 것이나, 그 외에도 더 나은 신뢰도, 성능 그리고 웹 사이트와 웹 애플리케이션의 확장(scaling)을 위해 웹 서버 위에 배포되는 게이트웨이 캐시, CDN, 리버스 프록시 캐시 그리고 로드 밸랜서 등이 있습니다.
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/ko/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### 사설 브라우저 캐시
 

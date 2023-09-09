@@ -1,13 +1,6 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.ownKeys
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
 
 {{JSRef}}
@@ -20,8 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 
 ```js
 new Proxy(target, {
-  ownKeys(target) {
-  }
+  ownKeys(target) {},
 });
 ```
 
@@ -65,31 +57,34 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Object.getOwnPropertyNames()")}}를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  ownKeys(target) {
-    console.log('called');
-    return ['a', 'b', 'c'];
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    ownKeys(target) {
+      console.log("called");
+      return ["a", "b", "c"];
+    },
+  },
+);
 
 console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]
+// [ 'a', 'b', 'c' ]
 ```
 
 다음 코드는 불변 조건을 위반합니다.
 
 ```js example-bad
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: true,
-  value: 10 }
-);
+  value: 10,
+});
 
 const p = new Proxy(obj, {
   ownKeys(target) {
     return [123, 12.5, true, false, undefined, null, {}, []];
-  }
+  },
 });
 
 console.log(Object.getOwnPropertyNames(p));

@@ -26,19 +26,33 @@ l10n:
 
 ```js
 // アロー関数
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
+findLast((element) => {
+  /* … */
+});
+findLast((element, index) => {
+  /* … */
+});
+findLast((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-findLast(callbackFn)
-findLast(callbackFn, thisArg)
+findLast(callbackFn);
+findLast(callbackFn, thisArg);
 
 // インラインコールバック関数
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
+findLast(function (element) {
+  /* … */
+});
+findLast(function (element, index) {
+  /* … */
+});
+findLast(function (element, index, array) {
+  /* … */
+});
+findLast(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -88,7 +102,7 @@ findLast(function(element, index, array) { /* … */ }, thisArg)
 - 既存の、まだ呼び出されていない配列の要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値は、 `findLast()` がその要素の添字を呼び出したときの値になります。
 - {{jsxref("Operators/delete", "削除", "", 1)}}された要素に対しても呼び出されます。
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般的には避けるべきです。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 ## 例
 
@@ -98,10 +112,10 @@ findLast(function(element, index, array) { /* … */ }, thisArg)
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 }
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 // 在庫がない場合は真値を返す
@@ -115,14 +129,14 @@ console.log(inventory.findLast(isNotEnough));
 
 #### アロー関数と分割代入の使用
 
-先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)を使用して書くことができるかもしれません。
+先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#オブジェクトの分割代入)を使用して書くことができるかもしれません。
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 },
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 const result = inventory.findLast(({ quantity }) => quantity < 2);

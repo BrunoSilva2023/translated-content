@@ -1,13 +1,6 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.get
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 
 {{JSRef}}
@@ -20,8 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 
 ```js
 new Proxy(target, {
-  get(target, property, receiver) {
-  }
+  get(target, property, receiver) {},
 });
 ```
 
@@ -68,22 +60,25 @@ new Proxy(target, {
 다음 코드는 속성 값을 가져오는 것을 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  get(target, property, receiver) {
-    console.log(`called: ${property}`);
-    return 10;
+const p = new Proxy(
+  {},
+  {
+    get(target, property, receiver) {
+      console.log(`called: ${property}`);
+      return 10;
+    },
   },
-});
+);
 
 console.log(p.a); // "called: a"
-                  // 10
+// 10
 ```
 
 다음 코드는 불변 조건을 위반합니다.
 
 ```js
 const obj = {};
-Object.defineProperty(obj, 'a', {
+Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,

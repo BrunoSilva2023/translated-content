@@ -15,19 +15,33 @@ l10n:
 
 ```js
 // アロー関数
-some((element) => { /* … */ } )
-some((element, index) => { /* … */ } )
-some((element, index, array) => { /* … */ } )
+some((element) => {
+  /* … */
+});
+some((element, index) => {
+  /* … */
+});
+some((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-some(callbackFn)
-some(callbackFn, thisArg)
+some(callbackFn);
+some(callbackFn, thisArg);
 
 // インラインコールバック関数
-some(function(element) { /* … */ })
-some(function(element, index) { /* … */ })
-some(function(element, index, array){ /* … */ })
-some(function(element, index, array) { /* … */ }, thisArg)
+some(function (element) {
+  /* … */
+});
+some(function (element, index) {
+  /* … */
+});
+some(function (element, index, array) {
+  /* … */
+});
+some(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -64,7 +78,7 @@ some(function(element, index, array) { /* … */ }, thisArg)
 
 `some()` によって処理される要素の範囲は、 `callbackFn` が最初に呼び出される前に設定されます。`some()` の呼び出しが開始された後に追加された要素に対しては、`callbackFn` は呼び出されません。既存の配列要素が変更されたり、削除されたりした場合、`callbackFn` に渡される値は `some()` がそれらを訪れた時点での値になり、削除された要素に対して呼び出されることはありません。
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般的には避けるべきです。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 > **メモ:** このメソッドは空の配列ではあらゆる条件式に対して `false` を返します。
 
@@ -79,7 +93,7 @@ function isBiggerThan10(element, index, array) {
   return element > 10;
 }
 
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -88,7 +102,7 @@ function isBiggerThan10(element, index, array) {
 [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)は、より短い構文で同じテストを提供します。
 
 ```js
-[2, 5, 8, 1, 4].some((x) => x > 10);  // false
+[2, 5, 8, 1, 4].some((x) => x > 10); // false
 [12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
@@ -97,46 +111,46 @@ function isBiggerThan10(element, index, array) {
 `includes()` メソッドを真似て、このカスタム関数は配列にその要素が存在する場合に `true` を返します。
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
   return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### アロー関数を使ったある値が存在するかどうかのチェック
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
   return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 ### 任意の値の論理値への変換
 
 ```js
-const TRUTHY_VALUES = [true, 'true', 1];
+const TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
   return TRUTHY_VALUES.some((t) => t === value);
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 ## 仕様書

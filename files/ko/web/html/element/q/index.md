@@ -1,14 +1,8 @@
 ---
-title: '<q>: 인라인 인용문 요소'
+title: "<q>: 인라인 인용문 요소"
 slug: Web/HTML/Element/q
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/q
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<q>`요소**는 둘러싼 텍스트가 짧은 인라인 인용문이라는것을 나타냅니다. 대부분의 브라우저에서는 앞과 뒤에 따옴표를 붙여 표현합니다. `<q>`는 줄 바꿈이 없는 짧은 경우에 적합합니다. 긴 인용문은 {{htmlelement("blockquote")}} 요소를 사용하세요.
@@ -73,10 +67,12 @@ translation_of: Web/HTML/Element/q
 ## 예제
 
 ```html
-<p>Mozilla 재단의 웹사이트에 따르면,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q></p>
+<p>
+  Mozilla 재단의 웹사이트에 따르면,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('예제')}}
@@ -87,7 +83,7 @@ translation_of: Web/HTML/Element/q
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 같이 보기
 

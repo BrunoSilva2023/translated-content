@@ -1,7 +1,6 @@
 ---
-title: 'CSP: img-src'
+title: "CSP: img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
 
 {{HTTPSidebar}}
@@ -56,14 +55,14 @@ Content-Security-Policy: img-src https://example.com/
 아래의 {{HTMLElement("img")}} 태그가 차단되어 불러오지 않습니다:
 
 ```html
-<img src="https://not-example.com/foo.jpg" alt="example picture">
+<img src="https://not-example.com/foo.jpg" alt="example picture" />
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

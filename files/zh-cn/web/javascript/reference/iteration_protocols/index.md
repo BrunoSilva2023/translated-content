@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 ## 可迭代协议
 
-**可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置可迭代对象](#内置可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
+**可迭代协议**允许 JavaScript 对象定义或定制它们的迭代行为，例如，在一个 {{jsxref("Statements/for...of", "for..of")}} 结构中，哪些值可以被遍历到。一些内置类型同时是[内置的可迭代对象](#内置的可迭代对象)，并且有默认的迭代行为，比如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，而其他内置类型则不是（比如 {{jsxref("Object")}}）。
 
 要成为**可迭代**对象，该对象必须实现 **`@@iterator`** 方法，这意味着对象（或者它[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上的某个对象）必须有一个键为 `@@iterator` 的属性，可通过常量 {{jsxref("Symbol.iterator")}} 访问该属性：
 
@@ -83,7 +83,7 @@ const aGeneratorObject = (function* () {
 })();
 
 console.log(typeof aGeneratorObject.next);
-// "function"——它有 next 方法（返回正确的值），所以它是迭代器 
+// "function"——它有 next 方法（返回正确的值），所以它是迭代器
 
 console.log(typeof aGeneratorObject[Symbol.iterator]);
 // "function"——它有 @@iterator 方法（返回正确的迭代器），所以它是可迭代的
@@ -118,7 +118,7 @@ JavaScript 语言指定了产生或使用可迭代对象和迭代器的 API。
 
 ### 内置的可迭代对象
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `@@iterator` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象.
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `@@iterator` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象。
 
 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)返回[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，它们是可迭代的迭代器。[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回[异步生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)，它们是异步可迭代的迭代器。
 
@@ -149,6 +149,8 @@ Array Iterator {}
 - {{jsxref("Promise.race()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
 
 ```js
 const myObj = {};
@@ -158,7 +160,7 @@ new WeakSet(
     yield {};
     yield myObj;
     yield {};
-  })()
+  })(),
 ).has(myObj); // true
 ```
 

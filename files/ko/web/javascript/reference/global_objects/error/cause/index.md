@@ -1,11 +1,6 @@
 ---
 title: Error.prototype.cause
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.cause
 ---
 
 {{JSRef}}
@@ -30,7 +25,7 @@ browser-compat: javascript.builtins.Error.cause
 try {
   connectToDatabase();
 } catch (err) {
-  throw new Error('Connecting to database failed.', { cause: err });
+  throw new Error("Connecting to database failed.", { cause: err });
 }
 ```
 
@@ -43,13 +38,13 @@ try {
 ```js
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
-    throw new Error('RSA key generation requires integer inputs.', {
-      cause: { code: 'NonInteger', values: [p, q] },
+    throw new Error("RSA key generation requires integer inputs.", {
+      cause: { code: "NonInteger", values: [p, q] },
     });
   }
   if (!areCoprime(p, q)) {
-    throw new Error('RSA key generation requires two co-prime integers.', {
-      cause: { code: 'NonCoprime', values: [p, q] },
+    throw new Error("RSA key generation requires two co-prime integers.", {
+      cause: { code: "NonCoprime", values: [p, q] },
     });
   }
   // rsa algorithm…

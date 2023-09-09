@@ -1,14 +1,8 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 요청 헤더
-  - 참고자료
-  - 헤더
-translation_of: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`Authorization`** 요청 헤더는 서버의 사용자 에이전트임을 증명하는 자격을 포함하여, 보통 서버에서 {{HTTPStatus("401")}} `Unauthorized` 상태를 {{HTTPHeader("WWW-Authenticate")}} 헤더로 알려준 이후에 나옵니다.
@@ -60,10 +54,10 @@ HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또
 
 ## 기술 사양
 
-| 기술 사양                                            | 제목                                   |
-| ---------------------------------------------------- | -------------------------------------- |
+| 기술 사양                               | 제목                                   |
+| --------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                         | The 'Basic' HTTP Authentication Scheme |
 
 ## 함께 더 보기
 

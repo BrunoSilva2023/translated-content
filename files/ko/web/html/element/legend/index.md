@@ -1,14 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}
@@ -16,8 +8,6 @@ translation_of: Web/HTML/Element/legend
 **HTML `<legend>` 요소**는 부모 {{HTMLElement("fieldset")}} 콘텐츠의 설명을 나타냅니다.
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -71,4 +61,4 @@ translation_of: Web/HTML/Element/legend
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.legend")}}
+{{Compat}}

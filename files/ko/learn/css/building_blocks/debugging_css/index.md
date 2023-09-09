@@ -23,11 +23,11 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
             >파일 작업</a
           >
           에 대한 기본 지식, HTML 기본 사항 (<a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 소개</a
           >
           학습) 및 , CSS 작동 방식 이해 (<a
-            href="/en-US/docs/Learn/CSS/First_steps"
+            href="/ko/docs/Learn/CSS/First_steps"
             >CSS 첫 번째 단계</a
           >
           학습)
@@ -138,7 +138,7 @@ em {
 
 ## Firefox DevTools에 대해 자세히 알아보기
 
-여기 MDN에 Firefox DevTools에 대한 많은 정보가 있습니다. 주요 [DevTools 섹션](/ko/docs/Tools)을 살펴보고 이 강의에서 간략하게 다룬 내용에 대한 자세한 내용은 [방법 안내](/en-US/docs/Tools/Page_Inspector#How_to).
+여기 MDN에 Firefox DevTools에 대한 많은 정보가 있습니다. 주요 [DevTools 섹션](/ko/docs/Tools)을 살펴보고 이 강의에서 간략하게 다룬 내용에 대한 자세한 내용은 [방법 안내](/ko/docs/Tools/Page_Inspector#How_to).
 
 ## CSS의 디버깅 문제
 
@@ -163,8 +163,6 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 또한 MDN의 각 속성 페이지 하단에 있는 브라우저 호환성 표를 볼 수 있습니다. 이것들은 해당 속성에 대한 브라우저 지원을 보여주며, 속성의 일부 사용에 대한 지원이 있고 다른 것은 지원하지 않는 경우 종종 세분화됩니다. 아래 표는 {{cssxref("shape-outside")}} 속성에 대한 호환성 데이터를 보여줍니다.
 
-{{compat("css.shape-outside")}}
-
 ### 다른 것이 CSS를 무시합니까?
 
 여기서 특정성에 대해 배운 정보가 매우 유용할 것입니다. 당신이 하려고 하는 것을 무시하는 더 구체적인 무언가가 있다면, 당신은 무엇을 해결하려고 하는 매우 실망스러운 게임에 들어갈 수 있습니다. 그러나 위에서 설명한 대로 DevTools는 CSS가 적용되는 내용을 보여주고 이를 재정의하기에 충분히 구체적인 새 선택기를 만드는 방법을 알아낼 수 있습니다.
@@ -186,29 +184,8 @@ DevTools는 CSS 문제를 해결할 때 큰 도움이 될 수 있으므로 CSS�
 
 여전히 문제를 해결하는 데 어려움을 겪고 있다면 테스트 케이스를 축소하면 포럼에 게시하거나 동료에게 보여줌으로써 도움을 요청할 수 있습니다. 도움을 요청하기 전에 문제를 줄이고 문제가 발생한 위치를 정확히 식별하는 작업을 완료했음을 보여줄 수 있다면 도움을 받을 가능성이 훨씬 더 높습니다. 경험이 더 많은 개발자는 문제를 신속하게 찾아내고 올바른 방향으로 안내할 수 있으며, 그렇지 않더라도 축소된 테스트 사례를 통해 빠르게 살펴보고 최소한 도움을 줄 수 있기를 바랍니다.<!-- 피-->
 
-문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](<https://bugzilla .mozilla.org>)).
+문제가 실제로 브라우저의 버그인 경우 축소된 테스트 사례를 사용하여 관련 브라우저 공급업체에 버그 보고서를 제출할 수도 있습니다(예: Mozilla의 [bugzilla 사이트](https://bugzilla.mozilla.org)).
 
 CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것입니다. 그러나 우리 중 가장 경험이 많은 사람들조차도 때때로 도대체 무슨 일이 일어나고 있는지 궁금해합니다. 체계적인 접근 방식을 취하고 축소된 테스트 사례를 만들고 다른 사람에게 문제를 설명하면 일반적으로 수정 사항을 찾을 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

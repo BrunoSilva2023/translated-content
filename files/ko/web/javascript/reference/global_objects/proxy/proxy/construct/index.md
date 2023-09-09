@@ -1,13 +1,6 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 ---
 
 {{JSRef}}
@@ -20,8 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 
 ```js
 new Proxy(target, {
-  construct(target, argumentsList, newTarget) {
-  }
+  construct(target, argumentsList, newTarget) {},
 });
 ```
 
@@ -68,11 +60,11 @@ const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
     console.log(`called: ${argumentsList}`);
     return { value: argumentsList[0] * 10 };
-  }
+  },
 });
 
 console.log(new p(1).value); // "호출: 1"
-                             // 10
+// 10
 ```
 
 다음 코드는 불변 조건을 위반합니다.
@@ -81,7 +73,7 @@ console.log(new p(1).value); // "호출: 1"
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {
     return 1;
-  }
+  },
 });
 
 new p(); // TypeError 예외 발생
@@ -90,11 +82,14 @@ new p(); // TypeError 예외 발생
 다음 코드는 프록시를 부적절하게 초기화합니다. 프록시 초기화의 `target` 자체는 {{jsxref("Operators/new", "new")}} 연산에 대한 유효한 생성자여야 합니다.
 
 ```js example-bad
-const p = new Proxy({}, {
-  construct(target, argumentsList, newTarget) {
-    return {};
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    construct(target, argumentsList, newTarget) {
+      return {};
+    },
+  },
+);
 
 new p(); // TypeError is thrown, "p" is not a constructor
 ```

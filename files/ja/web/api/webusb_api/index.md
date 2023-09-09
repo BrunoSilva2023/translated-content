@@ -24,7 +24,7 @@ WebUSB は、これらの標準化されていない USB デバイスサービ�
 - {{domxref("USB")}}
   - : ウェブページが USB デバイスを検出し、接続するためのプロパティとメソッドを提供します。
 - {{domxref("USBConnectionEvent")}}
-  - : ユーザーエージェントが新しい USB デバイスのホストへの接続や切断を検出した時、{{domxref("USB.onconnect")}} や {{domxref("USB.ondisconnect")}} に渡されるイベント型です。
+  - : ユーザーエージェントが新しい USB デバイスのホストへの接続や切断を検出した時、{{domxref("USB.connect_event", "USB.onconnect")}} や {{domxref("USB.disconnect_event", "USB.ondisconnect")}} に渡されるイベント型です。
 - {{domxref("USBDevice")}}
   - : ペアリングした USB デバイスのメタデータと、制御用のメソッドを提供します。
 - {{domxref("USBInTransferResult")}}
@@ -53,12 +53,15 @@ WebUSB は、これらの標準化されていない USB デバイスサービ�
 この例では、接続された Arduino デバイス (ベンダー ID `0x2341`) に {{domxref("USB.requestDevice()")}} を用いてアクセスする方法を示します。
 
 ```js
-navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
+navigator.usb
+  .requestDevice({ filters: [{ vendorId: 0x2341 }] })
   .then((device) => {
-    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch((error) => { console.error(error); });
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ### 接続された全てのデバイスを検出する
@@ -68,10 +71,10 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 ```js
 navigator.usb.getDevices().then((devices) => {
   devices.forEach((device) => {
-    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });
-})
+});
 ```
 
 ## 仕様書

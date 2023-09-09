@@ -1,10 +1,6 @@
 ---
 title: jQuery
 slug: orphaned/Glossary/jQuery
-tags:
-  - Jquery em português
-translation_of: Glossary/jQuery
-original_slug: Glossary/jQuery
 ---
 
 **jQuery** é uma {{Glossary("Biblioteca")}} {{Glossary("JavaScript")}} que visa a simplificação na manipulação do {{Glossary("DOM")}} , nas chamadas de {{Glossary("AJAX")}} e no gerenciamento de {{Glossary("Eventos")}} . É muito utilizado por desenvolvedores de Javascript.
@@ -37,7 +33,7 @@ window.onload = function() {
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "jQuery")}} on Wikipedia
+- [jQuery](https://pt.wikipedia.org/wiki/jQuery) on Wikipedia
 - Web site oficial [jQuery](https://jquery.com/)
 
 ### Technical information

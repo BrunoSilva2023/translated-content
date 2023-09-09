@@ -1,13 +1,6 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.has
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
 {{JSRef}}
@@ -20,8 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 
 ```js
 new Proxy(target, {
-  has(target, prop) {
-  }
+  has(target, prop) {},
 });
 ```
 
@@ -65,15 +57,18 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Operators/in", "in")}} 연산자를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  has(target, prop) {
-    console.log(`called: ${prop}`);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    has(target, prop) {
+      console.log(`called: ${prop}`);
+      return true;
+    },
   },
-});
+);
 
-console.log('a' in p); // "called: a"
-                       // true
+console.log("a" in p); // "called: a"
+// true
 ```
 
 다음 코드는 불변 조건을 위반합니다.
@@ -88,7 +83,7 @@ const p = new Proxy(obj, {
   },
 });
 
-'a' in p; // TypeError is thrown
+"a" in p; // TypeError is thrown
 ```
 
 ## 명세서

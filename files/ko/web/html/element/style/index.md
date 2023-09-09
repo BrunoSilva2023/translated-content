@@ -1,14 +1,6 @@
 ---
-title: '<style>: 스타일 정보 요소'
+title: "<style>: 스타일 정보 요소"
 slug: Web/HTML/Element/style
-tags:
-  - CSS
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/style
 ---
 
 {{HTMLSidebar}}
@@ -21,7 +13,7 @@ translation_of: Web/HTML/Element/style
 
 문서가 다수의 `<style>`과 `<link>` 요소를 포함하면 서로의 순서대로 {{glossary("DOM")}}에 스타일을 적용합니다. 따라서 예상치 못한 종속 문제를 피하려면 올바른 순서를 따라 `<style>` 및 `<link>` 요소를 배치해야 합니다.
 
-`<link>` 요소와 동일하게, `<style>` 요소도 미디어 쿼리를 값으로 가지는 {{htmlattrxref("media", "style")}} 특성을 포함할 수 있습니다. 이를 통해 {{glossary("viewport", "뷰포트")}} 너비 등 매체 기능에 따라 선택적으로 스타일 시트를 적용할 수 있습니다.
+`<link>` 요소와 동일하게, `<style>` 요소도 미디어 쿼리를 값으로 가지는 [`media`](/ko/docs/Web/HTML/Element/style#media) 특성을 포함할 수 있습니다. 이를 통해 {{glossary("viewport", "뷰포트")}} 너비 등 매체 기능에 따라 선택적으로 스타일 시트를 적용할 수 있습니다.
 
 ## 특성
 
@@ -55,16 +47,16 @@ translation_of: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -77,25 +69,25 @@ translation_of: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style>
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -108,25 +100,25 @@ translation_of: Web/HTML/Element/style
 ```html
 <!doctype html>
 <html>
-<head>
-  <style>
-    p {
-      color: white;
-      background-color: blue;
-      padding: 5px;
-      border: 1px solid black;
-    }
-  </style>
-  <style media="all and (max-width: 500px)">
-    p {
-      color: blue;
-      background-color: yellow;
-    }
-  </style>
-</head>
-<body>
-  <p>This is my paragraph.</p>
-</body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -185,7 +177,7 @@ translation_of: Web/HTML/Element/style
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.style")}}
+{{Compat}}
 
 ## 같이 보기
 

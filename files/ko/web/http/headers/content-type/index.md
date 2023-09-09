@@ -1,7 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
 ---
 
 {{HTTPSidebar}}
@@ -49,8 +48,8 @@ HTML 폼 전송으로 일어나는 {{HTTPMethod("POST")}} 요청 내에서, 요�
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

@@ -1,18 +1,6 @@
 ---
 title: NavigatorPlugins
 slug: orphaned/Web/API/NavigatorPlugins
-tags:
-  - API
-  - DOM
-  - Experimental
-  - HTML
-  - Interface
-  - Navigation
-  - NavigatorPlugins
-  - Plugins
-  - Reference
-translation_of: Web/API/NavigatorPlugins
-original_slug: Web/API/NavigatorPlugins
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

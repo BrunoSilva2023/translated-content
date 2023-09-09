@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
-translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -62,10 +61,10 @@ function dessiner() {
 
   for(var i = 0; i < tailleMemoireTampon; i++) {
     hauteurBarre = tableauDonnees[i];
-    
+
     contexteCanvas.fillStyle = 'rgb(' + (hauteurBarre+100) + ',50,50)';
        contexteCanvas.fillRect(x, HAUTEUR-hauteurBarre/2, largeurBarre, hauteurBarre/2);
-       
+
     x += largeurBarre + 1;
   }
 };

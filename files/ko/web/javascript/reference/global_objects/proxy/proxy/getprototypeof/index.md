@@ -1,13 +1,6 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
 {{JSRef}}
@@ -22,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototype
 new Proxy(obj, {
   getPrototypeOf(target) {
     // …
-  }
+  },
 });
 ```
 
@@ -65,14 +58,14 @@ const obj = {};
 const proto = {};
 const handler = {
   getPrototypeOf(target) {
-    console.log(target === obj);   // true
+    console.log(target === obj); // true
     console.log(this === handler); // true
     return proto;
   },
 };
 
 const p = new Proxy(obj, handler);
-console.log(Object.getPrototypeOf(p) === proto);    // true
+console.log(Object.getPrototypeOf(p) === proto); // true
 ```
 
 ### getPrototypeOf 트랩을 싱핼 시키는 5가지 방법
@@ -85,11 +78,11 @@ const p = new Proxy(obj, {
   },
 });
 console.log(
-  Object.getPrototypeOf(p) === Array.prototype,  // true
+  Object.getPrototypeOf(p) === Array.prototype, // true
   Reflect.getPrototypeOf(p) === Array.prototype, // true
-  p.__proto__ === Array.prototype,               // true
-  Array.prototype.isPrototypeOf(p),              // true
-  p instanceof Array,                            // true
+  p.__proto__ === Array.prototype, // true
+  Array.prototype.isPrototypeOf(p), // true
+  p instanceof Array, // true
 );
 ```
 
@@ -99,8 +92,8 @@ console.log(
 const obj = {};
 const p = new Proxy(obj, {
   getPrototypeOf(target) {
-    return 'foo';
-  }
+    return "foo";
+  },
 });
 Object.getPrototypeOf(p); // TypeError: "foo" is not an object or null
 

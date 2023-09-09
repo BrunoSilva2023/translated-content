@@ -1,21 +1,13 @@
 ---
 title: <del>
 slug: Web/HTML/Element/del
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/del
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<del>` 요소**는 문서에서 제거된 텍스트의 범위를 나타냅니다. 문서나 소스 코드의 변경점 추적 등에 사용할 수 있습니다. {{htmlelement("ins")}} 요소를 추가된 텍스트의 범위를 나타낼 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -75,8 +67,7 @@ translation_of: Web/HTML/Element/del
 ## 예제
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 
@@ -120,7 +111,7 @@ del::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,6 +1,8 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -26,13 +28,13 @@ slug: Web/API/Notification/dir
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  dir: 'rtl'
-}
+  body: "Do you like my body?",
+  dir: "rtl",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.dir) // should return 'rtl'
+console.log(n.dir); // should return 'rtl'
 ```
 
 ## 仕様書

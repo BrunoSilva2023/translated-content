@@ -1,17 +1,11 @@
 ---
 title: Наследование и цепочка прототипов
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - JavaScript
-  - Наследование
-  - ООП
-  - Прототип объекта
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 
 {{jsSidebar("Advanced")}}
 
-Модель наследования в JavaScript может озадачить опытных разработчиков на высокоуровневых объектно-ориентированных языках (таких, например, как Java или C++), поскольку она динамическая и не включает в себя реализацию понятия `class` (хотя ключевое слово `class,` бывшее долгие годы зарезервированным, и приобрело практическое значение в стандарте ES2015, однако, Class в JavaScript ES>=6 представляет собой лишь "синтаксический сахар" поверх прототипно-ориентированной модели наследования).
+Модель наследования в JavaScript может озадачить опытных разработчиков на высокоуровневых объектно-ориентированных языках (таких, например, как Java или C++), поскольку она динамическая и не включает в себя реализацию понятия `class` (хотя ключевое слово `class`, бывшее долгие годы зарезервированным, и приобрело практическое значение в стандарте ES2015, однако, классы в JavaScript представляют собой лишь "синтаксический сахар" поверх прототипно-ориентированной модели наследования).
 
 В плане наследования JavaScript работает лишь с одной сущностью: объектами. Каждый объект имеет внутреннюю ссылку на другой объект, называемый его **прототипом**. У объекта-прототипа также есть свой собственный прототип и так далее до тех пор, пока цепочка не завершится объектом, у которого свойство prototype равно `null`. По определению, `null` не имеет прототипа и является завершающим звеном в **цепочке прототипов**.
 
@@ -79,9 +73,9 @@ JavaScript не имеет "методов" в смысле, принятом в
 ```js
 var o = {
   a: 2,
-  m: function(){
+  m: function () {
     return this.a + 1;
-  }
+  },
 };
 
 console.log(o.m()); // 3
@@ -102,7 +96,7 @@ console.log(p.m()); // 13
 ### Создание объектов с помощью литералов
 
 ```js
-var o = {a: 1};
+var o = { a: 1 };
 
 // Созданный объект 'o' имеет Object.prototype в качестве своего [[Prototype]]
 // у 'o' нет собственного свойства 'hasOwnProperty'
@@ -118,7 +112,7 @@ var a = ["yo", "whadup", "?"];
 // Цепочка прототипов при этом выглядит так:
 // a ---> Array.prototype ---> Object.prototype ---> null
 
-function f(){
+function f() {
   return 2;
 }
 
@@ -138,10 +132,10 @@ function Graph() {
 }
 
 Graph.prototype = {
-  addVertex: function(v){
+  addVertex: function (v) {
     this.vertexes.push(v);
-  }
-}
+  },
+};
 
 var g = new Graph();
 // объект 'g' имеет собственные свойства 'vertexes' и 'edges'.
@@ -153,7 +147,7 @@ var g = new Graph();
 В ECMAScript 5 представлен новый метод создания объектов: [Object.create](/en/JavaScript/Reference/Global_Objects/Object/create). Прототип создаваемого объекта указывается в первом аргументе этого метода:
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 // a ---> Object.prototype ---> null
 
 var b = Object.create(a);
@@ -224,42 +218,43 @@ var square = new Square(2);
 `B` наследует от `A`:
 
 ```js
-function A(a){
+function A(a) {
   this.varA = a;
 }
 
 // What is the purpose of including varA in the prototype when A.prototype.varA will always be shadowed by
 // this.varA, given the definition of function A above?
 A.prototype = {
-  varA : null,  // Shouldn't we strike varA from the prototype as doing nothing?
-      // perhaps intended as an optimization to allocate space in hidden classes?
-      // https://developers.google.com/speed/articles/optimizing-javascript#Initializing instance variables
-      // would be valid if varA wasn't being initialized uniquely for each instance
-  doSomething : function(){
+  varA: null, // Shouldn't we strike varA from the prototype as doing nothing?
+  // perhaps intended as an optimization to allocate space in hidden classes?
+  // https://developers.google.com/speed/articles/optimizing-javascript#Initializing instance variables
+  // would be valid if varA wasn't being initialized uniquely for each instance
+  doSomething: function () {
     // ...
-  }
-}
+  },
+};
 
-function B(a, b){
+function B(a, b) {
   A.call(this, a);
   this.varB = b;
 }
 B.prototype = Object.create(A.prototype, {
-  varB : {
+  varB: {
     value: null,
     enumerable: true,
     configurable: true,
-    writable: true
+    writable: true,
   },
-  doSomething : {
-    value: function(){ // переопределение
+  doSomething: {
+    value: function () {
+      // переопределение
       A.prototype.doSomething.apply(this, arguments); // call super
       // ...
     },
     enumerable: true,
     configurable: true,
-    writable: true
-  }
+    writable: true,
+  },
 });
 B.prototype.constructor = B;
 

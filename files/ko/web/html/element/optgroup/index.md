@@ -1,14 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
 
 {{HTMLSidebar}}
@@ -16,8 +8,6 @@ translation_of: Web/HTML/Element/optgroup
 **HTML `<optgroup>` 요소**는 {{HTMLElement("select")}} 요소의 옵션을 묶을 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -94,4 +84,4 @@ translation_of: Web/HTML/Element/optgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}

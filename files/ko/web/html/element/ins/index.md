@@ -1,21 +1,13 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ins
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<ins>` 요소**는 문서에 추가된 텍스트의 범위를 나타냅니다. {{htmlelement("del")}} 요소를 사용하면 삭제된 텍스트의 범위를 나타낼 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -114,7 +106,7 @@ ins::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ins")}}
+{{Compat}}
 
 ## 같이 보기
 

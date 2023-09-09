@@ -1,11 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contenteditable
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -13,8 +8,6 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 **`contenteditable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소를 편집할 수 있는지 나타내는 열거형 특성입니다.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 가능한 값은 다음과 같습니다.
 
@@ -35,7 +28,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.contenteditable")}}
+{{Compat}}
 
 ## 같이 보기
 

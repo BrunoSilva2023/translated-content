@@ -1,13 +1,6 @@
 ---
-title: '<code>: 인라인 코드 요소'
+title: "<code>: 인라인 코드 요소"
 slug: Web/HTML/Element/code
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}
@@ -69,8 +62,10 @@ translation_of: Web/HTML/Element/code
 ## 예제
 
 ```html
-<p>함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로,
-사용자가 복사 혹은 삭제를 손쉽게 할 수 있습니다.</p>
+<p>
+  함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가
+  복사 혹은 삭제를 손쉽게 할 수 있습니다.
+</p>
 ```
 
 {{EmbedLiveSample("예제", 640, 70)}}
@@ -87,7 +82,7 @@ CSS `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## 같이 보기
 

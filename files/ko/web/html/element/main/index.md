@@ -1,23 +1,15 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/main
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<main>` 요소**는 문서 {{HTMLElement("body")}}의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
-{{htmlattrxref("hidden")}} 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
+[`hidden`](/ko/docs/Web/HTML/Global_attributes#hidden) 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
 
 <table class="properties">
   <tbody>
@@ -63,7 +55,7 @@ translation_of: Web/HTML/Element/main
       <th scope="row">가능한 ARIA 역할</th>
       <td>
         기본적으로 <code>main</code> 역할 포함,
-        {{ARIARole("presentation")}} 가능.
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a> 가능.
       </td>
     </tr>
     <tr>
@@ -94,20 +86,19 @@ translation_of: Web/HTML/Element/main
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- other content -->
@@ -123,7 +114,7 @@ translation_of: Web/HTML/Element/main
 
 건너뛰기 링크, 스킵 내비게이션(skipnav)은 접근성 보조기술이 주요 탐색 구획, 정보 배너 등 반복되는 큰 구획을 빠르게 넘어갈 수 있도록 지원하는 기법으로, 사용자가 페이지의 주요 내용으로 신속하게 접근할 수 있도록 도와줍니다.
 
-`<main>` 요소에 {{htmlattrxref("id")}} 요소를 추가해 건너뛰기 링크의 대상으로 지정하세요.
+`<main>` 요소에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 요소를 추가해 건너뛰기 링크의 대상으로 지정하세요.
 
 ```html
 <body>
@@ -154,12 +145,10 @@ translation_of: Web/HTML/Element/main
 대부분의 브라우저에서 `<main>` 요소를 지원합니다. 그러나 Internet Explorer 11 이하를 지원할 땐 `<main>` 요소에 `"main"` {{glossary("ARIA")}} 역할을 명시해 접근성을 확보하는 것이 좋습니다.
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 같이 보기
 

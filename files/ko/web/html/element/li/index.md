@@ -1,12 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}
@@ -14,8 +8,6 @@ translation_of: Web/HTML/Element/li
 **HTML `<li>` 요소**는 목록의 항목을 나타냅니다. 반드시 정렬 목록({{htmlelement("ol")}}), 비정렬 목록({{htmlelement("ul")}}, 혹은 메뉴({{htmlelement("menu")}}) 안에 위치해야 합니다. 메뉴와 비정렬 목록에서는 보통 불릿으로 항목을 나타내고, 정렬 목록에서는 숫자나 문자를 사용한 오름차순 카운터로 나타냅니다.
 
 {{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -50,12 +42,12 @@ translation_of: Web/HTML/Element/li
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("presentation")}}, {{ARIARole("radio")}},
-        {{ARIARole("separator")}}, {{ARIARole("tab")}},
-        {{ARIARole("treeitem")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitem_role'><code>menuitem</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role'><code>menuitemcheckbox</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role'><code>menuitemradio</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/option_role'><code>option</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radio_role'><code>radio</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/separator_role'><code>separator</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/treeitem_role'><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
@@ -97,9 +89,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ol>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ol>
 ```
 
@@ -109,9 +101,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ol type="I">
-    <li value="3">third item</li>
-    <li>fourth item</li>
-    <li>fifth item</li>
+  <li value="3">third item</li>
+  <li>fourth item</li>
+  <li>fifth item</li>
 </ol>
 ```
 
@@ -121,9 +113,9 @@ translation_of: Web/HTML/Element/li
 
 ```html
 <ul>
-    <li>first item</li>
-    <li>second item</li>
-    <li>third item</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
 ```
 
@@ -135,7 +127,7 @@ translation_of: Web/HTML/Element/li
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 같이 보기
 

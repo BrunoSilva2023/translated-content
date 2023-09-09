@@ -15,19 +15,33 @@ l10n:
 
 ```js
 // アロー関数
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
+forEach((element) => {
+  /* … */
+});
+forEach((element, index) => {
+  /* … */
+});
+forEach((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+forEach(callbackFn);
+forEach(callbackFn, thisArg);
 
 // インラインコールバック関数
-forEach(function(element) { /* … */ })
-forEach(function(element, index) { /* … */ })
-forEach(function(element, index, array){ /* … */ })
-forEach(function(element, index, array) { /* … */ }, thisArg)
+forEach(function (element) {
+  /* … */
+});
+forEach(function (element, index) {
+  /* … */
+});
+forEach(function (element, index, array) {
+  /* … */
+});
+forEach(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -67,7 +81,7 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 
 `forEach()` によって処理される配列要素の範囲は、`callbackFn` が最初に呼び出される前に設定されます。訪問済みの添字、または範囲を外れた添字に割り当てられている要素については `callbackFn` が実行されません。既存の配列要素が変更または削除された場合、`callbackFn` に渡される値は `forEach()` がそれらを参照した時点での値になります。削除された配列要素を参照することはありません。既に参照された配列要素が反復処理の間に（例えば {{jsxref("Array.prototype.shift()", "shift()")}} を使用して）削除された場合、後の要素は飛ばされます。([下記の例を参照してください](#反復処理中の配列の変更)。)
 
-> **警告:** 前項で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特殊な場合を除き）一般に避けるべきです。
+> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `forEach()` は配列の各要素に対して `callbackFn` 関数を一度ずつ実行します。{{jsxref("Array.prototype.map()", "map()")}} や {{jsxref("Array.prototype.reduce()", "reduce()")}} と異なり、返値は常に {{jsxref("undefined")}} であり、チェーンできません。チェーンの最後に副作用を生じさせるのが典型的な使用法です。
 
@@ -110,7 +124,7 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 
 ### 初期化されていない値については何もしない（不連続な配列）
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* 空 */, 7];
 let numCallbackRuns = 0;
 
@@ -132,7 +146,7 @@ console.log({ numCallbackRuns });
 ### for ループから forEach への変換
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copyItems = [];
 
 // before
@@ -150,7 +164,7 @@ items.forEach((item) => {
 
 > **メモ:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
 >
->以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
+> 以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
 
 次のコードは配列の要素ごとに、コンソールに 1 行ずつ要素の内容を出力します。
 
@@ -228,10 +242,10 @@ const obj2 = copy(obj1); // obj2 looks like obj1 now
 `forEach()` は反復処理の前に配列のコピーを生成しません。
 
 ```js
-const words = ['one', 'two', 'three', 'four'];
+const words = ["one", "two", "three", "four"];
 words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift(); // 'one' が配列から削除される
   }
 }); // one // two // four
@@ -254,7 +268,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // 使用方法
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
